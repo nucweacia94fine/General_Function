@@ -27,6 +27,7 @@ if __name__=="__main__":
             err_lineNum = lastCallStack[1] #取得發生的行號
             err_funcName = lastCallStack[2] #取得發生的函數名稱
             err_Msg = f"\nFile \"{err_fileName}\",\n line {err_lineNum},\n in {err_funcName}: [{type(e)}]\n {e.args[0]}\n"
+            # Ref.[1]
     
             DT_error = datetime.datetime.now()            
             if sys_error_count == 2:
@@ -62,3 +63,5 @@ if __name__=="__main__":
                 DT_error2 =  DT_error
                 T_module.sleep(5)
 
+# Ref: 
+# [1]. https://dotblogs.com.tw/caubekimo/2018/09/17/145733
