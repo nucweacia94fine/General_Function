@@ -37,7 +37,7 @@ print("============================================")
 print(f"Socket receive: {socket_receive}")
 print(f"Socket lost: {socket_lost}")
 T_now = datetime.datetime.now() 
-T_today_str = str(T_now.year) + str(T_now.month) + str(T_now.day)
+T_today_str = '{:04d}{:02d}{:02d}'.format(T_now.year,T_now.month,T_now.day)
 
 if not socket_receive and socket_lost:    
     print(T_now)
